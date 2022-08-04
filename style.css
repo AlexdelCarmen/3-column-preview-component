@@ -1,7 +1,85 @@
 /* font-family: 'Big Shoulders Display', cursive;
 font-family: 'Lexend Deca', sans-serif; */
 
+* {
+  box-sizing: border-box;
+}
 
+:root {
+  --card-1-bg: hsl(31, 77%, 52%);
+  --card-2-bg: hsl(184, 100%, 22%);
+  --card-3-bg: hsl(179, 100%, 13%);
+  --light-1: hsla(0, 0%, 100%, 0.75);
+  --light-2: hsl(0, 0%, 95%);
+  --main-font: "Lexend Deca", sans-serif;
+  --title-font: "Big Shoulders Display", cursive;
+  --paragraph-size: 15px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--light-2);
+  font-family: var(--main-font);
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2.5rem auto;
+  width: 25%;
+}
+
+.card {
+  padding: 3rem 2rem;
+  color: var(--light-1);
+  width: 260px;
+}
+
+.orange {
+  background-color: var(--card-1-bg);
+}
+
+.cyan {
+  background-color: var(--card-2-bg);
+}
+
+.dark-cyan {
+  background-color: var(--card-3-bg);
+}
+
+.card-title {
+  font-family: var(--title-font);
+  text-transform: uppercase;
+}
+
+.card-text {
+  font-size: var(--paragraph-size);
+}
+
+.card-button {
+  background-color: var(--light-2);
+  border: 2px solid var(--light-2);
+  margin-top: 50px;
+  font-family: var(--main-font);
+  font-size: var(--paragraph-size);
+  padding: 0.6rem 2rem;
+  border-radius: 30px;
+}
+
+.orange > .card-button {
+  color: var(--card-1-bg);
+}
+
+.cyan > .card-button {
+  color: var(--card-2-bg);
+}
+
+.dark-cyan > .card-button {
+  color: var(--card-3-bg);
+}
 
 .attribution {
   font-size: 11px;
